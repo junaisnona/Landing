@@ -3,19 +3,22 @@ import One from "./One";
 import Three from "./Three";
 import Two from "./Two";
 
-function ThreeLanding({isVisible} : {isVisible: boolean}) {
+interface Props {
+  isVisible?: boolean;
+}
 
+function ThreeLanding({ isVisible }: Props) {
   return (
     <div>
       <div className="w-full grid grid-cols-3">
         <div>
-          <One isVisible={isVisible}/>
+          <One isVisible={isVisible} />
         </div>
         <div>
-          <Two isVisible={isVisible}/>
+          <Two isVisible={isVisible} />
         </div>
         <div>
-          <Three isVisible={isVisible}/>
+          <Three isVisible={isVisible} />
         </div>
       </div>
     </div>

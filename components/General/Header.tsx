@@ -4,9 +4,9 @@ import logo from "../../assets/logo_dark.png";
 
 function Header() {
   return (
-    <header>
-      <nav className="w-full bg-primary-color flex justify-between items-center py-5">
-        <div className="w-60 h-7">
+    <header className="sticky z-10 top-0">
+      <nav className="w-full bg-primary-color flex justify-between items-center py-3 xl:py-5">
+        <div className="w-52 xl:w-60 h-5">
           <Image
             src={logo}
             alt="logo"
@@ -15,7 +15,7 @@ function Header() {
           />
         </div>
         <div>
-          <button className="font-semibold text-white py-1 px-8 border border-gray-300 hover:border-white border-[1px] rounded-md mr-12">
+          <button className="font-normal text-[17px] text-white py-[2px] px-9 mr-4 lg:mr-10 border border-[1px] border-slate-300 hover:border-white outline-none shadow-none rounded-md">
             Sign Up
           </button>
         </div>

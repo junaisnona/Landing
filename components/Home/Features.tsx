@@ -9,7 +9,7 @@ function ShapeBox({ image }: { image: StaticImageData }) {
   return (
     <div className="w-full">
       <div
-        className="relative flex justify-center items-center lg:h-[600px]"
+        className="relative flex justify-center items-center mx-auto xs:w-full xs:h-[400px] sm:w-[480px] lg:h-[600px] lg:w-full"
         style={{
           backgroundImage: `url(${background.src})`,
           backgroundSize: "720px 420px",
@@ -31,21 +31,21 @@ function ShapeBox({ image }: { image: StaticImageData }) {
 
 function DescriptionBox({ title, desc }: { title: string; desc: string }) {
   return (
-    <div className="w-[80%]">
-      <h4 className="text-3xl leading-[6rem]">{title}</h4>
-      <p className="text-xl text-gray-600">{desc}</p>
+    <div className="w-[80%] my-12 lg:my-0">
+      <h4 className="text-2xl lg:text-3xl pb-9">{title}</h4>
+      <p className="text-base lg:text-xl text-gray-600">{desc}</p>
     </div>
   );
 }
 
 function Features() {
   return (
-    <div className="w-full lg:w-[95%] mx-auto">
-      <div className="grid grid-rows-6 grid-cols-1 lg:grid-rows-3 lg:grid-cols-2 gap-x-8">
-        <div>
+    <div className="w-full 2xl:w-[95%] mx-auto">
+      <div className="grid  grid-cols-1 auto-rows-min lg:grid-rows-3 lg:grid-cols-2 2xl:gap-x-8">
+        <div className="order-1">
           <ShapeBox image={sourcing} />
         </div>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center order-2">
           <DescriptionBox
             title={"Ease of Apparels & Linen Sourcing"}
             desc={
@@ -53,7 +53,7 @@ function Features() {
             }
           />
         </div>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center order-4 lg:order-3">
           <DescriptionBox
             title={"Live Order Tracking"}
             desc={
@@ -61,13 +61,13 @@ function Features() {
             }
           />
         </div>
-        <div>
+        <div className="order-3 lg:order-4">
           <ShapeBox image={tracking} />
         </div>
-        <div>
+        <div className="order-5">
           <ShapeBox image={quality} />
         </div>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center order-6">
           <DescriptionBox
             title={"Quality and Fast Deliveries"}
             desc={
